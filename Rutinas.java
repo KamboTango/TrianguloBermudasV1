@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class Rutinas {
-	
+	//Comentario de prueba
 	//Se crean las matrices y arreglos necesarios
 	
 	static String [] [] [] hotel = new String [3] [11] [3];   //Se crea matriz habitaciones  piso/cuartos y 3 atributos por cuarto
