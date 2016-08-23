@@ -24,7 +24,7 @@ public class IUHotel {
 			System.out.println("Bienvenidos al Hotel El Triángulo.");
 			System.out.println("Digite el número correspondiente a cada opción para ejecutar la acción");
 			System.out.println("**1 Ingresar cuartos al sistema");
-			System.out.println("**2 Ver el costo por persona");
+			System.out.println("**2 Ver el costo por persona");            //TERMINADO
 			System.out.println("**3 Ver cantidad de personas en un cuarto");
 			System.out.println("**4 Ver ingresos por semana");
 			System.out.println("**5 Habitación de personas en grupo");

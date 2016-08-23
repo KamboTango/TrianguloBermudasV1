@@ -30,8 +30,8 @@ public class Rutinas {
 					default:
 						break;
 				}	
-				hotel[piso][cuartos][1] = "0";
-				hotel[piso][cuartos][2] = "";
+				hotel[piso][cuartos][1] = "0";          // Esto es si esta ocupado o no
+				hotel[piso][cuartos][2] = "";           // Esta es la lista de los codigos de los cuartos (Strings)
 			}
 		}
 	}
@@ -176,14 +176,13 @@ public class Rutinas {
 		}
 	}
 	
-	public static void eliminarCuarto()throws java.io.IOException{
-		BufferedReader in;
-		in = new BufferedReader (new InputStreamReader(System.in));
-	}
 	
 	public static void costoPorPersona()throws java.io.IOException{
 		BufferedReader in;
 		in = new BufferedReader (new InputStreamReader(System.in));
+		System.out.println("Una persona en un cuarto tipo A cuesta " + configuracion[0][0][1] + ".");
+		System.out.println("Una persona en un cuarto tipo AA cuesta " + configuracion[1][0][1] + ".");
+		System.out.println("Una persona en un cuarto tipo AAA cuesta " + configuracion[2][0][1] + ".");
 	}
 	
 	public static void personasEnCuarto()throws java.io.IOException{
@@ -202,10 +201,10 @@ public class Rutinas {
 	}
 	
 	public static String[][] getMatrizPersonas (String listaPersonas){   //Esto transforma el String en una Matriz de Strings
-		//Separados por ';'
-		int cantidadPersonasEnLista = contarCaracteres(listaPersonas, ';');
+		//Separados por ';' Aplica a listaPersonas porque son la lista de personas separadas por su código de cuarto
+		int cantidadPersonasEnLista = contarCaracteres(listaPersonas, ';'); //Me dice cuantas personas hay en listaPersonas
 		if (cantidadPersonasEnLista > 0 ){
-			String [][] lista = new String [cantidadPersonasEnLista][2];
+			String [][] lista = new String [cantidadPersonasEnLista][2];  
 			for(int i = 0; i < cantidadPersonasEnLista; i++){
 				
 				String substrPersona = listaPersonas.substring(0, listaPersonas.indexOf(";"));
@@ -334,7 +333,7 @@ public class Rutinas {
 		System.out.println("-- END MATRIX: HOTEL -- ");
 
 	}
-	private static String[][] stringToMatriz(String strPersonas, int maxPersonas) {
+	private static String[][] stringToMatriz(String strPersonas, int maxPersonas) {  //Transforma el String a Matriz (la reversa 
 		int cantPersonas = contarCaracteres(strPersonas, ';');
 		 
 		if (cantPersonas > 0 ){
